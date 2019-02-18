@@ -10,7 +10,7 @@ Using given operation it is possible to change every element to a single element
 Now we need to find elements in arrays which have minimum diffirence, as we know it has to be some element of array. 
 To find the minimum difference we can do the following : 
 
-Let us say two arrays are $A$ and $B$. Also we have variable $mi = 1018$. 
+Let us say two arrays are $A$ and $B$. Also we have variable $mi = 10^{18}$. 
 1. We sort array $B$.
 2. For every element of $A$ we do a binary search on $B$ to find two closest element to it, then we update $mi$ incase this diff is smaller than $mi$.
 
