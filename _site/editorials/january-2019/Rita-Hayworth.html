@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset='utf-8'>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,maximum-scale=2">
+<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/style.css?v=e91c4c4ba47eb897389cb7a216031c2bd5608438">
+
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+	  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+	});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>January 2019 | UVCE NCODE</title>
+<meta name="generator" content="Jekyll v3.7.4" />
+<meta property="og:title" content="January 2019" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A monthly programming contest conducted by IEEE UVCE Computer Society." />
+<meta property="og:description" content="A monthly programming contest conducted by IEEE UVCE Computer Society." />
+<link rel="canonical" href="http://localhost:4000/editorials/january-2019/Rita-Hayworth.html" />
+<meta property="og:url" content="http://localhost:4000/editorials/january-2019/Rita-Hayworth.html" />
+<meta property="og:site_name" content="UVCE NCODE" />
+<script type="application/ld+json">
+{"description":"A monthly programming contest conducted by IEEE UVCE Computer Society.","@type":"WebPage","url":"http://localhost:4000/editorials/january-2019/Rita-Hayworth.html","headline":"January 2019","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <h1 id="project_title">January 2019</h1>
+          <h2 id="project_tagline">Rita Hayworth</h2>
+
+        </header>
+    </div>
+
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h2 id="solution">Solution</h2>
+
+<p>In this problem, we wish to minimize the cost needed to take the package from Red, $R$ to Andy, $A$. 
+Since the good guys, $G$, cells transport Rita Hayworth free of cost, 
+we only need the services of Brooks each time we encounter a block of Bad, $B$, cells.</p>
+
+<p>We scan the string that represents the row of cells and keep track of the cost. 
+We begin updating the cost once we are in between $R$ and $A$ as follows</p>
+
+<p><script type="math/tex">if \  \ A_i = "B" and \ \ A_{i - 1} \ne "B" \implies C = C + 2</script>
+<script type="math/tex">if \  \ A_i = "B" and \ \ A_{i - 1} = "B" \implies C = C + 1</script></p>
+
+<p>This is because the number of exchanges performed across each block of $B$’s is $1$ + the number of cells within the block. 
+Finally when we reach the other character $R$ or $A$, we stop iterating.</p>
+
+<p>Note: The cost remains the same if we swap the cells with $R$ and $A$.</p>
+
+<h2 id="implementation">Implementation</h2>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;bits/stdc++.h&gt;
+</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">string</span> <span class="n">s</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">s</span><span class="p">;</span>
+
+    <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="sc">'A'</span><span class="p">);</span>
+    <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="sc">'R'</span><span class="p">);</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">&gt;</span> <span class="n">j</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">swap</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="kt">int</span> <span class="n">bad_guys</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">groups</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="n">j</span><span class="p">;</span> <span class="o">++</span><span class="n">k</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">==</span> <span class="sc">'B'</span><span class="p">)</span> <span class="p">{</span>
+            <span class="o">++</span><span class="n">groups</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="k">while</span> <span class="p">(</span><span class="n">k</span> <span class="o">&lt;</span> <span class="n">j</span> <span class="o">&amp;&amp;</span> <span class="n">s</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">==</span> <span class="sc">'B'</span><span class="p">)</span> <span class="p">{</span>
+            <span class="o">++</span><span class="n">bad_guys</span><span class="p">;</span>
+            <span class="o">++</span><span class="n">k</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">bad_guys</span> <span class="o">+</span> <span class="n">groups</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li><em>Time complexity</em>: $\mathcal{O}(N)$</li>
+  <li><em>Space complexity</em>: $\mathcal{O}(N)$ to store the string where $N$ is the length of the string.</li>
+</ul>
+
+<p><a href="../../">back</a></p>
+
+
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+  </body>
+</html>
