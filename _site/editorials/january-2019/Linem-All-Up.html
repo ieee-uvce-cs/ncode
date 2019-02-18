@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset='utf-8'>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,maximum-scale=2">
+<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/style.css?v=dfc2aa7ed984685066dbd8ab0c390c8cb3926721">
+
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+	  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+	});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>January 2019 | UVCE NCODE</title>
+<meta name="generator" content="Jekyll v3.7.4" />
+<meta property="og:title" content="January 2019" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A monthly programming contest conducted by IEEE UVCE Computer Society." />
+<meta property="og:description" content="A monthly programming contest conducted by IEEE UVCE Computer Society." />
+<link rel="canonical" href="http://localhost:4000/editorials/january-2019/Linem-All-Up.html" />
+<meta property="og:url" content="http://localhost:4000/editorials/january-2019/Linem-All-Up.html" />
+<meta property="og:site_name" content="UVCE NCODE" />
+<script type="application/ld+json">
+{"description":"A monthly programming contest conducted by IEEE UVCE Computer Society.","@type":"WebPage","url":"http://localhost:4000/editorials/january-2019/Linem-All-Up.html","headline":"January 2019","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <h1 id="project_title">January 2019</h1>
+          <h2 id="project_tagline"><a href=https://www.hackerrank.com/contests/uvce-ncode-january-2019/challenges/linem-all-up->Line'm All Up</a></h2>
+
+        </header>
+    </div>
+
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h2 id="solution">Solution</h2>
+
+<p>$sum[i]$, Number of ways to arrange till length $i$ with last element of any type.</p>
+
+<p>$dp[i][j]$, Number of ways to arrange the rack till length $i$ with last cigarette of type $j$.</p>
+
+<p>This implies number of ways to fill ith index as type $j$, is
+number of ways to arrange till $(i - 1)\  -$ (number of ways in which the elements $i - L[j]$ to $i - 1$ are of type $j$), 
+because in this case placing ith element as type j will exceed j’s threshold L[j].</p>
+
+<p><em>i.e</em>, $dp[i][j] = sum[i - 1] - \sum_{k=i - L[j] - 1}^{i - 1}dp[k][j]$</p>
+
+<p>Now, number of ways in which the elements $i - L[j]$ to $i - 1$ are of type $j$, is
+number of ways to arrange till $i - L[j] - 1\  -$ (number of ways to arrange till $i - L[j] - 1$ with last cigarette of type $j$), 
+because in this case it will not be possible to place $L[j]$ number of $j$ type elements from $i - L[j]$ to $i - 1$.</p>
+
+<p><em>i.e</em>, $dp[i][j] = sum[i - 1] - (sum[i - L[j] - 1] - dp[i - L[j] - 1][j])$</p>
+
+<h2 id="implementation">Implementation</h2>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;bits/stdc++.h&gt;
+</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">ll</span> <span class="o">=</span> <span class="kt">long</span> <span class="kt">long</span><span class="p">;</span>
+<span class="k">constexpr</span> <span class="n">ll</span> <span class="n">MOD</span> <span class="o">=</span> <span class="mf">1e9</span> <span class="o">+</span> <span class="mi">7</span><span class="p">;</span>
+<span class="k">constexpr</span> <span class="n">ll</span> <span class="n">N</span> <span class="o">=</span> <span class="mf">2e3</span> <span class="o">+</span> <span class="mi">3</span><span class="p">;</span>
+
+<span class="n">ll</span> <span class="n">dp</span><span class="p">[</span><span class="n">N</span><span class="p">][</span><span class="n">N</span><span class="p">];</span>
+<span class="n">ll</span> <span class="n">sum</span><span class="p">[</span><span class="n">N</span><span class="p">];</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">k</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span> <span class="o">&gt;&gt;</span> <span class="n">k</span><span class="p">;</span>
+
+    <span class="kt">int</span> <span class="n">l</span><span class="p">[</span><span class="n">k</span><span class="p">];</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">k</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">l</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="p">}</span>
+
+    <span class="n">sum</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">k</span><span class="p">;</span> <span class="o">++</span><span class="n">j</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">sum</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">];</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">&gt;</span> <span class="n">l</span><span class="p">[</span><span class="n">j</span><span class="p">])</span> <span class="p">{</span>
+                <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">sum</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="p">(</span><span class="n">sum</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="n">l</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">dp</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="n">l</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">])</span> <span class="o">+</span> <span class="n">MOD</span><span class="p">)</span> <span class="o">%</span> <span class="n">MOD</span><span class="p">;</span>
+            <span class="p">}</span>
+
+            <span class="n">sum</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">sum</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">])</span> <span class="o">%</span> <span class="n">MOD</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">sum</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li><em>Time complexity</em>: $\mathcal{O}(N * K)$</li>
+  <li><em>Space complexity</em>: $\mathcal{O}(N * K)$</li>
+</ul>
+
+<p><a href="./index.html">back</a></p>
+
+
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+  </body>
+</html>

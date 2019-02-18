@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset='utf-8'>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,maximum-scale=2">
+<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/style.css?v=dfc2aa7ed984685066dbd8ab0c390c8cb3926721">
+
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+	  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+	});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>January 2019 | UVCE NCODE</title>
+<meta name="generator" content="Jekyll v3.7.4" />
+<meta property="og:title" content="January 2019" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A monthly programming contest conducted by IEEE UVCE Computer Society." />
+<meta property="og:description" content="A monthly programming contest conducted by IEEE UVCE Computer Society." />
+<link rel="canonical" href="http://localhost:4000/editorials/january-2019/Wife-Killing-Banker.html" />
+<meta property="og:url" content="http://localhost:4000/editorials/january-2019/Wife-Killing-Banker.html" />
+<meta property="og:site_name" content="UVCE NCODE" />
+<script type="application/ld+json">
+{"description":"A monthly programming contest conducted by IEEE UVCE Computer Society.","@type":"WebPage","url":"http://localhost:4000/editorials/january-2019/Wife-Killing-Banker.html","headline":"January 2019","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <h1 id="project_title">January 2019</h1>
+          <h2 id="project_tagline"><a href=https://www.hackerrank.com/contests/uvce-ncode-january-2019/challenges/wife-killing-banker>Wife Killing Banker</a></h2>
+
+        </header>
+    </div>
+
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h2 id="solution">Solution</h2>
+<p>Using given operation it is possible to change every element to a single element of array. 
+Now we need to find elements in arrays which have minimum diffirence, as we know it has to be some element of array. 
+To find the minimum difference we can do the following :</p>
+
+<p>Let us say two arrays are $A$ and $B$. Also we have variable $mi = 1018$.</p>
+<ol>
+  <li>We sort array $B$.</li>
+  <li>For every element of $A$ we do a binary search on $B$ to find two closest element to it, then we update $mi$ incase this diff is smaller than $mi$.</li>
+</ol>
+
+<h4 id="proof">Proof:</h4>
+
+<p>Here we prove that whole array can be changed to any element of array.</p>
+
+<p>Suppose we have an array $A$ and we wanted to change all its elements to $A[x]$.</p>
+
+<ol>
+  <li>We can always make $A[0]$ equal to $A[1]$ as it is the only neighbour, can easily be shown :
+    <ul>
+      <li>if $A[1]$ &gt; $A[0]$ then $A[0]$ in min and $A[1]$ is max hence we can change $A[0]$ to $A[1]$</li>
+      <li>if $A[1]$ &lt; $A[0]$ non $A[0]$ is max ans $A[1]$ is min again we can change $A[0]$ to $A[1]$ else they are already equal</li>
+    </ul>
+  </li>
+  <li>
+    <p>Same goes with $A[n - 1]$ and $A[n - 2]$, $A[n - 1]$ can always be made equal to $A[n - 2]$</p>
+  </li>
+  <li>
+    <p>When we make $A[0]$ = $A[1]$, then we can make $A[1]$ = $A[2]$ as $A[0]$ is equal to $A[1]$ it doesn’t contribute to the comparision, 
+and after we havev changed $A[1]$ we can again change $A[0]$ to $A[1]$.</p>
+  </li>
+  <li>Now if we keep doing it we can make 
+$A[0]$ = $A[1]$ = $A[2]$ … = $A[x - 1]$ = $A[x]$ and similarly 
+$A[n - 1]$ = $A[n - 2]$ = $A[n - 3]$ … = $A[x + 1]$ = $A[x]$, hence making all elements equal to $A[x]$.</li>
+</ol>
+
+<h2 id="implementation">Implementation</h2>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;bits/stdc++.h&gt;
+</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span> <span class="p">()</span> <span class="p">{</span> 
+    <span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">ar</span><span class="p">[</span><span class="n">n</span><span class="p">],</span> <span class="n">br</span><span class="p">[</span><span class="n">n</span><span class="p">];</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">ar</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="p">}</span>   
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">br</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="p">}</span>
+    <span class="n">sort</span> <span class="p">(</span><span class="n">br</span><span class="p">,</span> <span class="n">br</span> <span class="o">+</span> <span class="n">n</span><span class="p">);</span>
+    <span class="kt">int</span> <span class="n">mi</span> <span class="o">=</span> <span class="n">abs</span> <span class="p">(</span><span class="n">br</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">ar</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">xx</span> <span class="o">:</span> <span class="n">ar</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">auto</span> <span class="n">itr</span> <span class="o">=</span> <span class="n">upper_bound</span> <span class="p">(</span><span class="n">br</span><span class="p">,</span> <span class="n">br</span> <span class="o">+</span> <span class="n">n</span><span class="p">,</span> <span class="n">xx</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">itr</span> <span class="o">!=</span> <span class="n">br</span> <span class="o">+</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">mi</span> <span class="o">=</span> <span class="n">min</span> <span class="p">(</span><span class="n">abs</span> <span class="p">(</span><span class="o">*</span><span class="n">itr</span> <span class="o">-</span> <span class="n">xx</span><span class="p">),</span> <span class="n">mi</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">itr</span> <span class="o">!=</span> <span class="n">br</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">mi</span> <span class="o">=</span> <span class="n">min</span> <span class="p">(</span><span class="n">abs</span> <span class="p">(</span><span class="o">*</span><span class="p">(</span><span class="o">--</span><span class="n">itr</span><span class="p">)</span> <span class="o">-</span> <span class="n">xx</span><span class="p">),</span> <span class="n">mi</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">mi</span> <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li><em>Time complexity</em>: $\mathcal{O}(N * log(N))$</li>
+  <li><em>Space complexity</em>: $\mathcal{O}(N)$</li>
+</ul>
+
+<p><a href="./index.html">back</a></p>
+
+
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+  </body>
+</html>

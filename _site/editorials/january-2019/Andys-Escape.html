@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset='utf-8'>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,maximum-scale=2">
+<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/style.css?v=dfc2aa7ed984685066dbd8ab0c390c8cb3926721">
+
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+	  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+	});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>January 2019 | UVCE NCODE</title>
+<meta name="generator" content="Jekyll v3.7.4" />
+<meta property="og:title" content="January 2019" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A monthly programming contest conducted by IEEE UVCE Computer Society." />
+<meta property="og:description" content="A monthly programming contest conducted by IEEE UVCE Computer Society." />
+<link rel="canonical" href="http://localhost:4000/editorials/january-2019/Andys-Escape.html" />
+<meta property="og:url" content="http://localhost:4000/editorials/january-2019/Andys-Escape.html" />
+<meta property="og:site_name" content="UVCE NCODE" />
+<script type="application/ld+json">
+{"description":"A monthly programming contest conducted by IEEE UVCE Computer Society.","@type":"WebPage","url":"http://localhost:4000/editorials/january-2019/Andys-Escape.html","headline":"January 2019","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <h1 id="project_title">January 2019</h1>
+          <h2 id="project_tagline"><a href=https://www.hackerrank.com/contests/uvce-ncode-january-2019/challenges/andys-escape>Andy's Escape</a></h2>
+
+        </header>
+    </div>
+
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h2 id="solution">Solution</h2>
+
+<p>Represent the start and end times in a linear data structure. 
+Let $t$ be an array where, $t[i] = j$, indicates that at ith time the guard was at the $j^{th}$ quarter.</p>
+
+<p>Now, we observe that if $t[i] = j$ and $t[i + 1] = k$ then quarters $j$ and $k$ are adjacent to each other (i.e connected by a single edge).</p>
+
+<p>We maintain a stack $s$, the element at the top of the stack is the quarter at which the guard is. 
+Traverse the array $t$, from $i = 1 \rightarrow 2 * N$.</p>
+
+<p>If the top of the stack $= t[i]$, it implies, $t[i]$ is a leaf node, pop the top element of the stack. 
+Otherwise, an edge exists between the element on top of the stack and $t[i]$, push $t[i]$ on top of stack.</p>
+
+<h2 id="implementation">Implementation</h2>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;bits/stdc++.h&gt;
+</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">ll</span> <span class="o">=</span> <span class="kt">long</span> <span class="kt">long</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span><span class="p">;</span>
+
+    <span class="kt">int</span> <span class="n">timing</span><span class="p">[</span><span class="mi">2</span> <span class="o">*</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">],</span> <span class="n">k</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">s</span><span class="p">,</span> <span class="n">e</span><span class="p">;</span>
+        <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">s</span> <span class="o">&gt;&gt;</span> <span class="n">e</span><span class="p">;</span>
+        <span class="n">timing</span><span class="p">[</span><span class="n">s</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="n">timing</span><span class="p">[</span><span class="n">e</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">s</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">k</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">n</span> <span class="o">&lt;&lt;</span> <span class="sc">' '</span> <span class="o">&lt;&lt;</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="sc">' '</span> <span class="o">&lt;&lt;</span> <span class="n">k</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
+
+    <span class="n">stack</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">quarter</span><span class="p">;</span>
+    <span class="n">quarter</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">timing</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">timing</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">quarter</span><span class="p">.</span><span class="n">top</span><span class="p">())</span> <span class="p">{</span>
+            <span class="n">quarter</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">quarter</span><span class="p">.</span><span class="n">top</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="sc">' '</span> <span class="o">&lt;&lt;</span> <span class="n">timing</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
+            <span class="n">quarter</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">timing</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li><em>Time complexity</em>: $\mathcal{O}(N)$</li>
+  <li><em>Space complexity</em>: $\mathcal{O}(N)$</li>
+</ul>
+
+<p><a href="./index.html">back</a></p>
+
+
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+  </body>
+</html>

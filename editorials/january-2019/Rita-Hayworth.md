@@ -2,6 +2,7 @@
 layout: default-editorial
 title: January 2019
 problem: Rita Hayworth
+link: https://www.hackerrank.com/contests/uvce-ncode-january-2019/challenges/rita-hayworth
 ---
 
 ## Solution 
@@ -59,5 +60,5 @@ int main() {
 * _Time complexity_: $\mathcal{O}(N)$
 * _Space complexity_: $\mathcal{O}(N)$ to store the string where $N$ is the length of the string.
 
-[back](../../)
+[back](./index.html)
 
