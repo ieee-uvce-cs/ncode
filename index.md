@@ -13,4 +13,5 @@ layout: default
 # Past Contests
 - [January 2019](https://www.hackerrank.com/contests/uvce-ncode-january-2019/challenges)
 - [November 2018](https://www.hackerrank.com/contests/uvce-ncode-november-2018/challenges)
+- [October 2018](https://www.hackerrank.com/contests/uvce-ncode-october-2018/)
 
