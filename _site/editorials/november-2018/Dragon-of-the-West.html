@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset='utf-8'>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,maximum-scale=2">
+<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/style.css?v=ddb0bb553972ca461bebb9ef4543563ce2447c29">
+
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+	  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+	});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>November 2018 | UVCE NCODE</title>
+<meta name="generator" content="Jekyll v3.7.4" />
+<meta property="og:title" content="November 2018" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A monthly programming contest conducted by IEEE UVCE Computer Society." />
+<meta property="og:description" content="A monthly programming contest conducted by IEEE UVCE Computer Society." />
+<link rel="canonical" href="http://localhost:4000/editorials/november-2018/Dragon-of-the-West.html" />
+<meta property="og:url" content="http://localhost:4000/editorials/november-2018/Dragon-of-the-West.html" />
+<meta property="og:site_name" content="UVCE NCODE" />
+<script type="application/ld+json">
+{"description":"A monthly programming contest conducted by IEEE UVCE Computer Society.","@type":"WebPage","headline":"November 2018","url":"http://localhost:4000/editorials/november-2018/Dragon-of-the-West.html","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <h1 id="project_title">November 2018</h1>
+          <h2 id="project_tagline">
+              <a style="color: white; text-decoration: underline; font-weight: bold;" 
+                  href=https://www.hackerrank.com/contests/uvce-ncode-november-2018/challenges/dragon-of-the-west->Dragon of the West
+              </a>
+          </h2>
+
+        </header>
+    </div>
+
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h2 id="solution">Solution</h2>
+
+<p>The Dragon of the West is a classic graph theory problem of connecting different connected components with the least number of edges possible.</p>
+
+<p>Here we restrict the number of edges to 1, rendering the actual connection part of the problem a triviality.
+The main challenge here is in efficiently scanning the graph data to find the sizes of the different connected components.</p>
+
+<p>Since the input data is given in the form of pairs of vertices which have an edge, an adjacency list representation of the graph is quite natural. 
+Building the graph is quick with just accessing the particular list of one of the vertices that form the edge and updating it with the other vertex.
+Next comes the formidable task of identifying the different labeled components and the size of each.</p>
+
+<p>A simple $\mathcal{O}(V^3)$ algorithm (where $V$ is the number of vertices) that does this job is Floyd’s algorithm for creating a transitive matrix. 
+One can then collapse each block of 1’s in the resulting binary matrix (while keeping a count of the number of vertices that are connected) to find the different components. 
+One can then use linear search to find the largest and second largest component and connect any vertex belonging to each, together. 
+However, the use of an adjacency matrix is quite wasteful of memory.</p>
+
+<p>We suggest the use of a depth first search algorithm <a href="https://codeforces.com/blog/entry/16823">this</a> or <a href="https://www.topcoder.com/community/competitive-programming/tutorials/introduction-to-graphs-and-their-data-structures-section-1/">this</a>, 
+where we keep track of the vertices seen by a prior dfs with another source node, keep a vector of sizes of each component by counting vertices visited in a dfs. 
+We perform dfs for every previously unreached vertex.</p>
+
+<p>Finally we can find the largest and second largest in $\mathcal{O}(K)$ time where $K$ is the number of connected components(which is at max the number of vertices). 
+The depth first search algorithm can be implemented in many ways and has the time complexity $\mathcal{O}(V+E)$ where $V$ is the number of vertices and $E$ is the number of edges in the graph.</p>
+
+<h2 id="implementation">Implementation</h2>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;bits/stdc++.h&gt;
+</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">dfs</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">*</span><span class="n">graph</span><span class="p">,</span> <span class="kt">int</span> <span class="n">s</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">seen</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">seen</span><span class="p">[</span><span class="n">s</span><span class="p">]</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">graph</span><span class="p">[</span><span class="n">s</span><span class="p">].</span><span class="n">size</span><span class="p">();</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">v</span> <span class="o">=</span> <span class="n">graph</span><span class="p">[</span><span class="n">s</span><span class="p">][</span><span class="n">i</span><span class="p">];</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">seen</span><span class="p">[</span><span class="n">v</span><span class="p">])</span> <span class="p">{</span>
+            <span class="n">count</span> <span class="o">+=</span> <span class="n">dfs</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">seen</span><span class="p">);</span>              
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="n">count</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span> <span class="o">&gt;&gt;</span> <span class="n">m</span><span class="p">;</span>
+
+    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">graph</span><span class="p">[</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">];</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">m</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">;</span>
+        <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">a</span> <span class="o">&gt;&gt;</span> <span class="n">b</span><span class="p">;</span>
+
+        <span class="n">graph</span><span class="p">[</span><span class="n">a</span><span class="p">].</span><span class="n">push_back</span><span class="p">(</span><span class="n">b</span><span class="p">);</span>
+        <span class="n">graph</span><span class="p">[</span><span class="n">b</span><span class="p">].</span><span class="n">push_back</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span> <span class="n">seen</span><span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">false</span><span class="p">);</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">conn_sz</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">seen</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="p">{</span>
+            <span class="kt">int</span> <span class="n">length</span> <span class="o">=</span> <span class="n">dfs</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">seen</span><span class="p">);</span>
+            <span class="n">conn_sz</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">length</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="n">sort</span><span class="p">(</span><span class="n">conn_sz</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">conn_sz</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+
+    <span class="kt">int</span> <span class="n">max_1</span> <span class="o">=</span> <span class="n">conn_sz</span><span class="p">.</span><span class="n">back</span><span class="p">();</span>
+    <span class="kt">int</span> <span class="n">max_2</span> <span class="o">=</span> <span class="p">(</span><span class="n">conn_sz</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="o">?</span> <span class="n">conn_sz</span><span class="p">[</span><span class="n">conn_sz</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">-</span> <span class="mi">2</span><span class="p">]</span> <span class="o">:</span> <span class="mi">0</span><span class="p">);</span>
+
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">max_1</span> <span class="o">+</span> <span class="n">max_2</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li><em>Time complexity</em>: $\mathcal{O}(V + E)$</li>
+  <li><em>Space complexity</em>: $\mathcal{O}(V + E)$</li>
+</ul>
+
+<p><a href="./index.html">back</a></p>
+
+
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+  </body>
+</html>
