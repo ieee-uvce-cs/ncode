@@ -5,7 +5,7 @@ layout: default
 > The best thing about a boolean is, even if you're wrong, you are only off by a bit.
 
 ## Upcoming Contest
-- [23 February, 2019](https://www.hackerrank.com/constests/uvce-ncode-february-2019/challenges)
+- [23 February, 2019](https://www.hackerrank.com/contests/uvce-ncode-february-2019/challenges)
 
 
 ## Editorials
