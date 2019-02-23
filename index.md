@@ -6,7 +6,7 @@ layout: default
 
 ## Ongoing Contest
 - Starting at **21:00, 23 February** and ending at **21:00, 24 February**.   
-Go to the [contest page](https://www.hackerrank.com/contests/uvce-ncode-february-2019/challenges).
+Go to the **[contest page](https://www.hackerrank.com/contests/uvce-ncode-february-2019/challenges)**.
 
 * * *
 
