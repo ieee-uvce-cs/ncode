@@ -2,13 +2,15 @@
 layout: default
 ---
 
-> The best thing about a boolean is, even if you're wrong, you are only off by a bit.
+> *The best thing about a boolean is, even if you're wrong, you are only off by a bit*.
 
-## Upcoming Contest
-- [23 February, 2019](https://www.hackerrank.com/contests/uvce-ncode-february-2019/challenges)
+## Ongoing Contest
+- **21:00, 23 February, 2019**. Click [here](https://www.hackerrank.com/contests/uvce-ncode-february-2019/challenges)
+to go to the contest page.
 
+* * *
 
-## Editorials
+### Solutions for past contests
 - [January 2019](./editorials/january-2019/index.html)
 - [November 2018](./editorials/november-2018/index.html)
 
