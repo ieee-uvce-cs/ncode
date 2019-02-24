@@ -11,7 +11,6 @@ Go to the **[contest page](https://www.hackerrank.com/contests/uvce-ncode-februa
 * * *
 
 ### Solutions for past contests
-- [February 2019](./editorials/february-2019/index.html)
 - [January 2019](./editorials/january-2019/index.html)
 - [November 2018](./editorials/november-2018/index.html)
 
