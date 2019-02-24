@@ -116,6 +116,7 @@ int main() {
 }
 ```
 
+<br>
 * _Time complexity_: $\mathcal{O}(n * q)$
 * _Space complexity_: $\mathcal{O}(2^n)$
 

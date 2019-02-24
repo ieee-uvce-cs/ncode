@@ -57,6 +57,7 @@ int main() {
 }
 ```
 
+<br>
 * _Time complexity_: $\mathcal{O}(N)$
 * _Space complexity_: $\mathcal{O}(N)$ to store the string where $N$ is the length of the string.
 

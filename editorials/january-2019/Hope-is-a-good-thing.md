@@ -67,6 +67,7 @@ int main () {
 }
 ```
 
+<br>
 * _Time complexity_: $\mathcal{O}(T)$
 * _Space complexity_: $\mathcal{O}(1)$
 

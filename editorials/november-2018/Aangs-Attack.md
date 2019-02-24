@@ -109,6 +109,7 @@ int main() {
 }
 ```
 
+<br>
 * _Time complexity_: $\mathcal{O}(t + N * log(N))$
 * _Space complexity_: $\mathcal{O}(N)$
 
