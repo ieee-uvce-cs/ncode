@@ -39,16 +39,18 @@ void precal() {
         }
     }
 
-    for (int i = 2; i < N; ++i) {
+    is_prime[0] = is_prime[1] = false;
+    for (int i = 0; i < N; ++i) {
         if (is_prime[i]) {
             primes.push_back(i);
         }
     }
 }
 
-bool possible(map<char, vector<int>> &p, string n) {
+bool possible(vector<int> *p, string n) {
     int curr = 0;
     for (char d : n) {
+        d -= '0';
         auto idx = lower_bound(p[d].begin(), p[d].end(), curr); 
         if (idx == p[d].end()) {
             return false;
@@ -65,10 +67,12 @@ int main() {
 
     string s;
     cin >> s;
+    assert(s.size() <= 1e5 && s.size() >= 1);
 
-    map<char, vector<int>> pos;
+    vector<int> pos[10];
     for (int i = 0; i < s.size(); ++i) {
-        pos[s[i]].push_back(i);
+        assert(isdigit(s[i]));
+        pos[s[i] - '0'].push_back(i);
     }
 
     int res = 0;
