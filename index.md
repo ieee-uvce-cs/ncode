@@ -2,7 +2,7 @@
 layout: default
 ---
 
-> *In order to understand recursion, one must understand recursion!*.
+> *In order to understand recursion, one must understand recursion!*
 * * *
 
 ### Upcoming Contest
