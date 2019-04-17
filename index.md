@@ -10,7 +10,7 @@ layout: default
 
 * * *
 
-### Solutions for Past Contests
+### Solutions to Past Contests
 - [February 2019](./editorials/february-2019/index.html)
 - [January 2019](./editorials/january-2019/index.html)
 - [November 2018](./editorials/november-2018/index.html)
