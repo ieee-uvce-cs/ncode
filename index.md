@@ -2,11 +2,15 @@
 layout: default
 ---
 
-> *The best thing about a boolean is, even if you're wrong, you are only off by a bit*.
+> *In order to understand recursion, one must understand recursion!*.
+* * *
+
+### Upcoming Contest
+- [April 2019](https://www.hackerrank.com/contests/uvce-ncode-april)
 
 * * *
 
-### Solution for past contests
+### Solutions for Past Contests
 - [February 2019](./editorials/february-2019/index.html)
 - [January 2019](./editorials/january-2019/index.html)
 - [November 2018](./editorials/november-2018/index.html)
