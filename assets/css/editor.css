@@ -1,0 +1,22 @@
+textarea {
+  max-width: 100%;
+  min-width: 100%;
+  float: top;
+  min-height: 350px;
+  overflow: scroll;
+  margin: auto;
+  padding: 10px;
+  display: inline-block;
+  background: #f4f4f9;
+  outline: none;
+  font-family: Courier, sans-serif;
+  font-size: 14px;
+}
+
+#preview {
+    padding: 7px;
+    margin-top: 20px;
+    width: 100%;
+    word-wrap: break-word;
+    border: 1px solid black;
+}

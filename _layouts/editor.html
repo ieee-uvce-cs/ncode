@@ -6,40 +6,50 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width,maximum-scale=2">
 <link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+<link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/editor.css?v=' | append: site.github.build_revision | relative_url }}">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+<script src="{{ '/assets/js/editor.js?v=' | append: site.github.build_revision | relative_url }}"></script>
 
 <script type="text/x-mathjax-config">
 	MathJax.Hub.Config({
 	  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
 	});
 </script>
-<script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+<script type="text/javascript" async 
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML"> 
 </script>
 
 {% seo %}
   </head>
-
   <body>
-
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
         <header class="inner">
           <h1 id="project_title">{{ page.title }}</h1>
           <h2 id="project_tagline">
-              <a style="color: white; text-decoration: underline; font-weight: bold;" 
-                  href={{ page.link }}>{{ page.problem }}
-              </a>
+              <a style="color: white; text-decoration: underline;" href="/">Home</a>
           </h2>
-
         </header>
     </div>
-
 
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        {{ content }}
+          <p>
+              Refer <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown cheatsheet</a>
+              and <a href="https://users.dickinson.edu/~richesod/latex/latexcheatsheet.pdf">LaTeX math cheatsheet</a>
+              to format the editorials.</br>
+              For mathematical symbols or equations, surround them with <span>$</span> symbol (incase of inline text) or
+              <span>$$</span> (incase of block text).
+          </p>
+          <textarea id="markdown" placeholder="Markdown text"></textarea>
+          <button onclick="compile()">Compile</button>
+          <div id="preview">
+              <p style="color: grey;">Preview</p>
+          </div>
+          </br>
       </section>
     </div>
 
@@ -51,9 +61,6 @@
           <a href="https://www.facebook.com/IEEE-UVCE-Computer-Society-894860704034107/" class="fa fa-facebook"> </a>
           &nbsp; 
           <a href="https://www.instagram.com/ieee.uvce.cs/" class="fa fa-instagram"></a>
-        </p>
-        <p style="font-size: 11px;">
-            <a style="text-decoration: none;" href="/editor.html">Markdown editor</a>
         </p>
       </footer>
     </div>
