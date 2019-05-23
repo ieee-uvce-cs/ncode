@@ -10,7 +10,7 @@ link: https://www.hackerrank.com/contests/uvce-ncode-april/challenges/zeddead
    
     * we have to find every combination of every length ($1$ to $M$ ) and see if they add up to $N$ after removing all the non-leaf nodes. This can be efficiently done using $bitmasks$. 
 
-Read about bitmasks here : https://codeforces.com/blog/entry/18169 
+Read about bitmasks here :   https://codeforces.com/blog/entry/18169 
    * How to remove the non-leaf nodes ?:
        
        * Since we are attaching the trees by its leaf nodes, every time we attach a tree to another, each loses one of its leaf nodes.
