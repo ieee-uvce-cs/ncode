@@ -11,7 +11,7 @@ layout: default
 * * *
 
 ### Solutions to Past Contests
-- [April 2019](./editorials/april-2019/index.html)
+- [April 2019](./editorials/April-2019/index.html)
 - [February 2019](./editorials/february-2019/index.html)
 - [January 2019](./editorials/january-2019/index.html)
 - [November 2018](./editorials/november-2018/index.html)
