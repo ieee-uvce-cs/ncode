@@ -6,7 +6,7 @@ layout: default
 * * *
 
 ### Upcoming Contest
-- July 2019
+- [August 2019](https://www.hackerrank.com/uvce-ncode-august-2019)
 
 * * *
 
@@ -19,6 +19,7 @@ layout: default
 * * *
 
 ### Past Contests
+- [April 2019](https://www.hackerrank.com/uvce-ncode-april)
 - [February 2019](https://www.hackerrank.com/contests/uvce-ncode-february-2019/)
 - [January 2019](https://www.hackerrank.com/contests/uvce-ncode-january-2019/challenges)
 - [November 2018](https://www.hackerrank.com/contests/uvce-ncode-november-2018/challenges)
