@@ -8,7 +8,7 @@ link: https:https://www.hackerrank.com/contests/uvce-ncode-august-2019/challenge
 
 * The problem basically asks us to find $2$ $disjoint$ $subtrees$ that gives us a maximum profit.
 
-* For each vertex $v$ let us calculate $sum_{v}$ - the sum of all the numbers in the subtree of vertex $v$, and $mx_{v}$ - maximum value from all $sum_{k}$ in subtree of vertex $v$, where $k$ belongs to the subtree of vertex $v$. This can be done using dynamic programming and [ dfs ] (https://www.geeksforgeeks.org/dfs-traversal-of-a-tree-using-recursion/)
+* For each vertex $v$ let us calculate $sum_{v}$ - the sum of all the numbers in the subtree of vertex $v$, and $mx_{v}$ - maximum value from all $sum_{k}$ in subtree of vertex $v$, where $k$ belongs to the subtree of vertex $v$. This can be done using dynamic programming and [dfs](https://www.geeksforgeeks.org/dfs-traversal-of-a-tree-using-recursion/)
 
 * if the $mx_{v}$ is updated at some point during the dfs, then we can start calculating our answer. Our answer is $max$ $($ $ans$ $,$ $mx_{v}$ + $mx_{k}$ $)$, where $k$ is a subtree of $v$.
 
