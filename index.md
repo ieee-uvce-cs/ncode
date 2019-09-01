@@ -6,11 +6,12 @@ layout: default
 * * *
 
 ### Upcoming Contest
-- [August 2019](https://www.hackerrank.com/uvce-ncode-august-2019)
+- [October 2019]
 
 * * *
 
 ### Solutions to Past Contests
+- [August 2019](./editorials/August-2019/index.html)
 - [April 2019](./editorials/April-2019/index.html)
 - [February 2019](./editorials/february-2019/index.html)
 - [January 2019](./editorials/january-2019/index.html)
@@ -19,6 +20,7 @@ layout: default
 * * *
 
 ### Past Contests
+- [August 2019](https://www.hackerrank.com/uvce-ncode-august-2019)
 - [April 2019](https://www.hackerrank.com/uvce-ncode-april)
 - [February 2019](https://www.hackerrank.com/contests/uvce-ncode-february-2019/)
 - [January 2019](https://www.hackerrank.com/contests/uvce-ncode-january-2019/challenges)
