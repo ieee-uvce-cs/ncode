@@ -11,7 +11,7 @@ layout: default
 * * *
 
 ### Solutions to Past Contests
-- [August 2019](./editorials/August-2019/Danish-Khan.md)
+- [August 2019](./editorials/August-2019/index.html)
 - [April 2019](./editorials/April-2019/index.html)
 - [February 2019](./editorials/february-2019/index.html)
 - [January 2019](./editorials/january-2019/index.html)
