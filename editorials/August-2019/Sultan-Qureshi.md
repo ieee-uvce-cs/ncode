@@ -11,7 +11,7 @@ link: https://www.hackerrank.com/contests/uvce-ncode-august-2019/challenges/sult
   * even + even = even
   * even + odd  = odd
   * all even numbers except $2$ are composite
-  * factors of any number $a$, other than $1$ and $a$ stays in the range of $[$ $2$ $,$ $\sqrt{a}$ $]$ 
+  * half of the factors of any number $a$, stays in the range of $[$ $1$ $,$ $\sqrt{a}$ $]$, lets call this factor $f$, the rest of the factors are basically $a/f$, unless $a/f$ and $f$ are the same. So we can just check for any half of the factor except for $1$, if there exists a factor in  $[$ $2$ $,$ $\sqrt{a}$ $]$, then number is composite
   * Therefore if a number is composite, it will have a factor in that range, if it is not composite, then the factors are not present in this range since it's only factors are $1$ and $a$.
 
 * Therefore the sum of every 2 pairs of odd prime number gives us a composite number.
