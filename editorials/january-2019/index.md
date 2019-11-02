@@ -1,6 +1,8 @@
 ---
 layout: default-editorial
 title: January 2019
+problem: Contest Link
+link: https://www.hackerrank.com/contests/uvce-ncode-january-2019/challenges
 ---
 
 ## Problems

@@ -1,6 +1,8 @@
 ---
 layout: default-editorial
 title: August 2019
+problem: Contest Link
+link: https://www.hackerrank.com/uvce-ncode-august-2019
 ---
 
 ## Problems

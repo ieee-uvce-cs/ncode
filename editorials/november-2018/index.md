@@ -1,6 +1,8 @@
 ---
 layout: default-editorial
 title: November 2018
+problem: Contest Link
+link: https://www.hackerrank.com/contests/uvce-ncode-november-2018/challenges
 ---
 
 ## Problems
