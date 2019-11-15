@@ -4,6 +4,7 @@ title: October 2019
 problem: Arthur And The Number
 link: https://www.hackerrank.com/contests/uvce-ncode-october-2019/challenges/arkham-childrens-hospital
 ---
+
 # Solution
 
 * If $number_i$ $\oplus$ $number_j$ = $x$, then $number_i$ $\oplus$ $x$ = $number_j$
