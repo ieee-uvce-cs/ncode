@@ -1,7 +1,7 @@
 ---
 layout: default-editorial
 title: October 2019
-problem: Arthur And The Toys
+problem: Arthur And The Number
 link: https://www.hackerrank.com/contests/uvce-ncode-october-2019/challenges/arkham-childrens-hospital
 ---
 # Solution
