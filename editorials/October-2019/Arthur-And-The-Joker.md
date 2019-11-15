@@ -2,7 +2,7 @@
 layout: default-editorial
 title: October 2019
 problem: Arthur And The Joker
-link:https://www.hackerrank.com/contests/uvce-ncode-october-2019/challenges/arthur-and-the-joker/problem
+link: https://www.hackerrank.com/contests/uvce-ncode-october-2019/challenges/arthur-and-the-joker/problem
 ---
 # Solution
 
