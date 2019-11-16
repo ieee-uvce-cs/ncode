@@ -10,7 +10,7 @@ link: https://www.hackerrank.com/contests/uvce-ncode-october-2019/challenges/jok
 * let $dp_{n}$ - the number of ways to split Arthur glass so that the total amount of space taken is $n$.
 * Consider the last glass, we either choose to split it or we don't.
 * Which gives us the recurrence: $dp_{n}$ = $dp_{n-m}$ + $dp_{n-1}$
-* However, small problem, $n$ is too big. Therefore we go for [matrix exponentiation] (https://www.geeksforgeeks.org/matrix-exponentiation/)
+* However, small problem, $n$ is too big. Therefore we go for [matrix exponentiation](https://www.geeksforgeeks.org/matrix-exponentiation/)
 
 
  
