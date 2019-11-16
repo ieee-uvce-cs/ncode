@@ -16,7 +16,7 @@ link: https://www.hackerrank.com/contests/uvce-ncode-october-2019/challenges/the
 
 * We compute the partial sum, till the bank that was restored
 
-* After restoring a bank, we check to the left and right of that bank and see if there exists a segment such that there aren't any destroyed bank which also includes the current restored bank.
+* After restoring a bank, we check to the left and right of that bank and see if there exists a segment such that there aren't any destroyed banks which also includes the current restored bank.
 
 * We also keep track of the ends till where the segment is restored. This is to facilitate the above.
 
