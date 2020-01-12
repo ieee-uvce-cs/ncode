@@ -117,4 +117,5 @@ int main()
 }
 
 ~~~
-* Time Complexity : $O(\Sigma | M_i | )$, where $|M_i|$, is the length os mockword $i$
+
+* Time Complexity : $O($ $\Sigma$ $| M_i |$ $)$, where $|M_i|$, is the length os mockword $i$.
