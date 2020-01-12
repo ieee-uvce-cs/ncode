@@ -6,7 +6,7 @@ link: https://www.hackerrank.com/contests/uvce-ncode-november-2019/challenges/ar
 ---
 # Solution
 
-* To solve this problem you need to know this cute data structure: [trie] (https://www.topcoder.com/community/competitive-programming/tutorials/using-tries/)
+* To solve this problem you need to know this cute data structure: [trie](https://www.topcoder.com/community/competitive-programming/tutorials/using-tries/)
 
 * Now create a trie having all the mockwords.
 * After this we shall make 2 DP arrays:
@@ -118,4 +118,4 @@ int main()
 
 ~~~
 
-* Time Complexity : $O($ $\Sigma$ $| M_i |$ $)$, where $|M_i|$, is the length os mockword $i$.
+* Time Complexity : $O($ $\Sigma$ $| M_i |$ $)$ , where $|M_i|$, is the length os mockword $i$.
