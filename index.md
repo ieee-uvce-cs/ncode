@@ -2,7 +2,7 @@
 layout: default
 ---
 
-> *They said that the programming problems were a tragedy. Little did I know that I was the joke.*
+> *In order to understand recursion one must understand recursion!*
 * * *
 
 ### Upcoming Contest
