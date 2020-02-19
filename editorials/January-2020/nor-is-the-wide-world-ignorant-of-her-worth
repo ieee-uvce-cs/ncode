@@ -6,9 +6,11 @@ link: https://www.hackerrank.com/contests/uvce-ncode-january-2020/challenges/nor
 ---
 # Solution
 
-
-
-
+* First things first, lets store Bassanio's location and Portio's location into variables  $(s_i,s_j)$ and $(e_i,e_j)$ which accepting the inputs itself.
+* Now let's keep a $dist[][]$ array, to keep track of the shortest dist to each cell from Bassanio's cell. 
+* Let's assume that initially, all cell are inaccessible from Bassanio's cell so all values in $dist[][]$ is initialized to $\infty$ except Bassanio's and Portia's cells.
+* After this perform a [Dijkstra's](https://cp-algorithms.com/graph/dijkstra.html) using Bassanio's cells as the source.
+   
 ~~~cpp
 
 #include<bits/stdc++.h>
@@ -55,7 +57,7 @@ int check(int i, int j)
 void Dijkstra()
 {
    queue<pair<int,int>>q;
-   q.push({si,sj});
+   q.push(make_pair(si,sj));
    dist[si][sj]=0;
    pair<int,int>delta[4] ={{0,1},{1,0},{-1,0},{0,-1}  };
    while(!q.empty())
