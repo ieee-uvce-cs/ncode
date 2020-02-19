@@ -54,8 +54,7 @@ int check(int i, int j)
       return 1;
     }
     return 0;
-}
-void Dijkstra()
+}void Dijkstra()
 {
    queue<pair<int,int>>q;
    q.push(make_pair(si,sj));
