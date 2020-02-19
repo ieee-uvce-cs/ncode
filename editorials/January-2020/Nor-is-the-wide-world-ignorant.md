@@ -36,9 +36,9 @@ void input()
 
                 cin>>arr[i][j];
                 if(arr[i][j]=='B')
-                    si=i,sj=j;
+                    {si=i,sj=j;}
                 else if(arr[i][j]=='P')
-                    ei=i,ej=j,arr[i][j]='0';
+                   { ei=i,ej=j,arr[i][j]='0';}
                 dist[i][j]=mod;
 
             }
