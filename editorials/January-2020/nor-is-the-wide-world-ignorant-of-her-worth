@@ -1,0 +1,18 @@
+---
+layout: default-editorial
+title: January 2020
+problem: Nor is the wide world ignorant of her worth...
+link: https://www.hackerrank.com/contests/uvce-ncode-january-2020/challenges/nor-is-the-wide-world-ignorant-of-her-worth-
+---
+# Solution
+
+* First things first, lets store Bassanio's location and Portio's location into variables  $(s_i,s_j)$ and $(e_i,e_j)$ which accepting the inputs itself.
+* Now let's keep a $dist[][]$ array, to keep track of the shortest dist to each cell from Bassanio's cell. 
+* Let's assume that initially, all cell are inaccessible from Bassanio's cell so all values in $dist[][]$ is initialized to $\infty$ except Bassanio's and Portia's cells.
+* After this perform a [Dijkstra's](https://cp-algorithms.com/graph/dijkstra.html) using Bassanio's cells as the source.
+   
+~~~cpp
+
+~~~
+
+* Time Complexity : $O(n^2+m)$
