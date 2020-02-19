@@ -67,4 +67,4 @@ int main()
 
 ~~~
 
-* Time Complexity : $O(| n_i |)$ , where $|n_i|$, is the length of $n_i$, per test case.
+* Time Complexity : $O($ $|$ $n_i|$ $)$ , where $|$n_i$|$, is the length of $n_i$, per test case.
