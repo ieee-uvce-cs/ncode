@@ -78,7 +78,7 @@ void Dijkstra()
            if(check(x1,y1) && (dist[x][y]+arr[x1][y1]-48) <dist[x1][y1])
            {
                dist[x1][y1]=dist[x][y]+arr[x1][y1]-48;
-               q.push({x1,y1});
+               q.push(make_pair(x1,y1));
            }
        }
    }
