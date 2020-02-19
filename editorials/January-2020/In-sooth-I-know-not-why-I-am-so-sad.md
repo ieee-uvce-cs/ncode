@@ -12,7 +12,7 @@ link: https://www.hackerrank.com/contests/uvce-ncode-january-2020/challenges/ant
 * Also notice that $x$ is in the range of $10^8$, so you can store it in any normal integer data type.
 * Also any number mod $x$ will also remain in integer range since $a%x$ $<$ $x$
 * Now how do we check if there is some $k$ for which the first $x$ digits of $n$ as a number is divisible by $x$ ?
-  * For every $k$, where $1$ $\le$ $k$ $\le$ |n|, we check for remainder with $x$
+  * For every $k$, where $1$ $\le$ $k$ $\le$ $[n]$, we check for remainder with $x$
    * If the remainder is $0$ it is "Aye", and you have your answer.
    * Say you have some remainder at for some number whose last digit is the $k^{th}$ digit of $n$, then we can count remainder in $k+1$, which is
      $rem[k+1]$ = $(rem[k]*10+ n[k+1])$ % $x$ 
