@@ -10,8 +10,7 @@ link: https://www.hackerrank.com/contests/uvce-ncode-january-2020/challenges/nor
 * Now let's keep a $dist[][]$ array, to keep track of the shortest dist to each cell from Bassanio's cell. 
 * Let's assume that initially, all cell are inaccessible from Bassanio's cell so all values in $dist[][]$ is initialized to $\infty$ except Bassanio's and Portia's cells.
 * After this perform a [Dijkstra's](https://cp-algorithms.com/graph/dijkstra.html) using Bassanio's cells as the source.
-   
-~~~cpp
+
 
 #include<bits/stdc++.h>
 #define mod (100000000)
@@ -19,8 +18,6 @@ using namespace std;
 typedef long long int ll;
 char arr[100][100];
 int h,w,si,sj,ei,ej, dist[100][100];
-//ifstream fin("input(janB2).txt");
-//ofstream fout("output(janB2).txt");
 
 
 void input()
@@ -55,7 +52,6 @@ int check(int i, int j)
     return 0;
 }
 
-{}
 void Dijkstra()
 {
    queue<pair<int,int>>q;
@@ -110,6 +106,6 @@ int main()
 }
 
 
-~~~
+
 
 * Time Complexity : $O(n^2+m)$
