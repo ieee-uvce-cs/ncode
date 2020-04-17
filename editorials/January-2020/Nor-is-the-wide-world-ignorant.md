@@ -4,6 +4,9 @@ title: January 2020
 problem: Nor is the wide world ignorant of her worth
 link: https://www.hackerrank.com/contests/uvce-ncode-january-2020/challenges/nor-is-the-wide-world-ignorant-of-her-worth-
 ---
+~~~cpp
+
+/*
 # Solution
 
 * First things first, lets store Bassanio's location and Portio's location into variables  $(s_i,s_j)$ and $(e_i,e_j)$ which accepting the inputs itself.
@@ -13,7 +16,7 @@ link: https://www.hackerrank.com/contests/uvce-ncode-january-2020/challenges/nor
    
 
 
-~~~cpp
+*/
 
 #include<bits/stdc++.h>
 #define mod (100000007)
@@ -109,7 +112,7 @@ int main()
     return 0;
 }
 
-
+//     * Time Complexity : $O(n^2+m)$ 
 ~~~
 
-* Time Complexity : $O(n^2+m)$ 
+
