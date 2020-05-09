@@ -9,6 +9,7 @@ link:https://www.hackerrank.com/contests/uvce-ncode-april-2020/challenges/quiddi
 
 #include<bits/stdc++.h>
 #define MOD(ll)(1e9+7)
+
 /* 
    - Remove the non-circular minimum sum sequence from the given sequence 
    and we get the
@@ -27,6 +28,7 @@ link:https://www.hackerrank.com/contests/uvce-ncode-april-2020/challenges/quiddi
 
 
 */
+
 using namespace std;
 int maximum(vector<int>arr, int n)
 {
