@@ -8,6 +8,8 @@ link: https://www.hackerrank.com/contests/uvce-ncode-july-2020/challenges/bunche
 * First find the number of sub-bunches can be formed from a single bunch by dfs.
 * If x is the number of sub bunches formed then minimum number of packets needed will be $(n/x)$ if $n$ is divisible by x else it will be $((n/x)+1)$
 
+# Implementation
+
 ~~~
 #include <bits/stdc++.h>
 

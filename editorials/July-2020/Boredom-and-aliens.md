@@ -10,6 +10,7 @@ link: https://www.hackerrank.com/contests/uvce-ncode-july-2020/challenges/abilit
 * There it's like the weight of each character is $1$ but here the weights of every character is given.
 * So whenever the character matches insted of increasing that position by 1 we increase with the weight of the matched character.
 
+# Implementation
 ~~~
 #include<bits/stdc++.h>  
 using namespace std; 

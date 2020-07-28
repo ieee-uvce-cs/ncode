@@ -10,8 +10,6 @@ link: https://www.hackerrank.com/contests/uvce-ncode-july-2020/challenges/left-o
     * The given sequence is a fibonacci.
     * When fibonacci numbers are divided by 3 it forms a periodic sequence of 01120221 and has length 8.
 
-    ![Branching](../../assets/images/fibonacci.png)
-
 # Implementation 
 
 ~~~
