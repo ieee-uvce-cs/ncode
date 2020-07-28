@@ -1,7 +1,7 @@
 ---
 layout: default-editorial
-title: August 2019
-problem: Sardar Khan
-link:https://www.hackerrank.com/contests/uvce-ncode-july-2020/challenges/bunches-of-balloon
+title: July 2020
+problem: Boredom and ballons
+link: https://www.hackerrank.com/contests/uvce-ncode-july-2020/challenges/bunches-of-balloon
 ---
 # Solution
