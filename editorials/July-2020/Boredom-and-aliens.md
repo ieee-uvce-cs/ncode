@@ -7,7 +7,7 @@ link: https://www.hackerrank.com/contests/uvce-ncode-july-2020/challenges/abilit
 # Solution
 
 * This can be solved similar to LCS but here weights of the characters are given.
-* There it's like the weight of each character is $1$ but here the weights of every character is given.
+* In LCS all characters have equal weight i.e; $1$ but here the weights of every character is given as a input.
 * So whenever the character matches insted of increasing that position by 1 we increase with the weight of the matched character.
 
 # Implementation
