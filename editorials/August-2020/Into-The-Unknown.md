@@ -1,7 +1,7 @@
 ---
 layout: default-editorial
 title: August 2020
-problem: Let It Go!
+problem: Into the Unknown
 link: https://www.hackerrank.com/contests/uvce-ncode-august-2020/challenges/to-the-unknown
 ---
 
