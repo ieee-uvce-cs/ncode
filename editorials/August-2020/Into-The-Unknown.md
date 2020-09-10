@@ -16,7 +16,7 @@ link: https://www.hackerrank.com/contests/uvce-ncode-august-2020/challenges/to-t
     
     *  After pushing $s_i$ to the end of $a$, $a$ contains at most one $X-Y-X$ substring and it must be a suffix if exists.
      
-     * For a string $s$ which doesn't contain $X-Y-X$ substring, after pushing an element to the end of $a$ , it has at most $O(log2|a|)$ even palindromic suffixes.
+     * For a string $s$ which doesn't contain $X-Y-X$ substring, after pushing an element to the end of $a$ , it has at most O(log2|a|) even palindromic suffixes.
   
 
 ## Implementation
