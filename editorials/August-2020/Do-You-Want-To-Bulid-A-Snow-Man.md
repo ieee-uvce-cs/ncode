@@ -7,7 +7,7 @@ link: https://www.hackerrank.com/contests/uvce-ncode-august-2020/challenges/do-y
 
 ## Solution
 
-* This problem is similar to that of a range sum Queries with updation.But here we need print the snapshots of sum.
+* This problem is similar to that of a range sum Queries with updation.But here we need to print the snapshots of sum.
 * For this both Fenwick as well as Segmented trees can be used.
 * But here since we need to print the sum in snapshots which depicts Fenwick tree its easy to use Fenwick trees and print sum at each point when the sum is calculated.
 
