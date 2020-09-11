@@ -15,7 +15,7 @@ link: https://www.hackerrank.com/contests/uvce-ncode-august-2020/challenges/let-
 * Key Observation :
     *  $x$ will always be less than $k$ because any factorial above $k-1$ will definately be divisible by $k$. Hence there is no chance of getting that number mod $k$ as $2$ .
     * So if we don't get  $x$ such that $x!$ mod $k = 2$ below $k$ then such number doesn't exist and we have to print $Let$ $it$ $Go!$
-    * Given that $k$ lies from $1$ to $10^3$ while $Q$ is from $1$ to $2* 10^5$ hence we need to pre-calculate and store all possible answers in order to avoid _TLE_
+    * Given that $k$ lies between $1$ to $10^3$ while $Q$ is from $1$ to $2* 10^5$, we need to pre-calculate and store all possible answers in order to avoid _TLE_
 
 
 
