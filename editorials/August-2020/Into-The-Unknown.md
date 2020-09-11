@@ -1,18 +1,18 @@
 ---
 layout: default-editorial
 title: August 2020
-problem: Into the Unknown
+problem: Into the Unknown!
 link: https://www.hackerrank.com/contests/uvce-ncode-august-2020/challenges/to-the-unknown
 ---
 
 ## Solution 
 
 * $Key$ $Points$:
-    * Fix the sequence $s$, for all folding methods of $s$, as long as the results of them don't have any available folds, then the number of folding marks of them must be equal, and their results must be the same (or simply reverse sequence)
+    * Fix the sequence $s$, for all folding methods of $s$, as long as their results don't have any available folds, then the number of folding marks must be equal, and their results must be the same (or simply reverse sequence)
     
     * Intuitively, we will fold s from left to right. Let's maintain another string $a$. Each time:
-    Push $s_i$ to the end of $a$ and check if a contains new X-Y-X substring. If it does, then fold it.
-    Calculate the number of folds of a. Note that this step won't actually change a. After that you get the answer of $[s_1,s_2...s_i]$.
+    - Push $s_i$ to the end of $a$ and check if a contains a new X-Y-X substring. If it does, then fold it.
+    - Calculate the number of folds of a. Note that this step won't actually change a. After that you get an answer of $[s_1,s_2...s_i]$.
     
     *  After pushing $s_i$ to the end of $a$, $a$ contains at most one $X-Y-X$ substring and it must be a suffix if exists.
   
