@@ -6,6 +6,8 @@ link: https://www.hackerrank.com/contests/uvce-ncode-october-2020/challenges/q1-
 ---
 # Solution
 
+* There are many solutions for this problem. But since the number of testcases is more it requires faster solution to avoid TLE
+* One of the best and fastest solution is It can be shown that the answer is simply the 1-based indices of the one bits in the binary representation of n. So, we can just do this in O(log n) time.
 
 
  

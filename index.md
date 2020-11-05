@@ -6,8 +6,7 @@ layout: default
 * * *
 
 ### Upcoming Contest
-- [October 2020](https://www.hackerrank.com/uvce-ncode-october-2020)
-
+- [November 2020]
 * * *
 
 ### Past Contests
@@ -24,3 +23,5 @@ layout: default
 - [April 2020](./editorials/April-2020/index.html)
 - [July 2020](./editorials/July-2020/index.html)
 - [August 2020](./editorials/August-2020/index.html)
+- [October 2020](./editorials/October-2020/index.html)
+
