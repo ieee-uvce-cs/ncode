@@ -7,6 +7,7 @@ layout: default
 
 ### Upcoming Contest
 - [November 2020]
+
 * * *
 
 ### Past Contests
