@@ -8,7 +8,7 @@ link: https://www.hackerrank.com/contests/uvce-ncode-october-2020/challenges/q2-
 # Solution
 
 - The problem statement can be diveded into two parts
-  - First part is to find the number of co-primes of n from 1-n also called as [Euler’s Totient function](https://en.wikipedia.org/wiki/Euler%27s_totient_function) .
+  - First part is to find the number of co-primes of n from 1-n also called as [Euler’s Totient function](https://en.wikipedia.org/wiki/Euler%27s_totient_function) Since the constraints are less this can be done even in brute force.
   - Other part of the function is to find number of subsequences. It can be observed that the number of subsequences for n websites is the (n/2)th catalan number.
 - Since the number of testecases is more this problem require pre-calculation.
 
