@@ -10,6 +10,7 @@ link: https://www.hackerrank.com/contests/uvce-ncode-november-2020/challenges/q3
 * In this order, maintain the DSU. For each connected component, let's maintain dpk: the number of ways * to divide this component into k groups. When you merge two connected clusters, you have to recalculate the DP as in the multiplication of two polynomials (of course, if you bound k by the size of the connected component, similarly to the similar tree DP's, it works in O(n2) total).
 
 * Once some connected component becomes a clique, then we obtain a new cluster, and you should increase dp1 for this connected component by 1.
+
 ~~~cpp
 #include<bits/stdc++.h>
 using namespace std;

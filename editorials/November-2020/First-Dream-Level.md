@@ -19,11 +19,10 @@ link: https://www.hackerrank.com/contests/uvce-ncode-november-2020/challenges/q1
 * Total number of occupied rows=r;
 
 * Steps to find solution
-
-        * Find number of occupied rows(r)
-        * ans=ans+ (2*(t-r)) now iterate all occupied rows
-        * if seats 2-9 are available add 2 to ans,
-        * else if seats 2-5 or 4-7 or 6-9 are available add 1 to ans.
+    * Find number of occupied rows(r)
+    * ans=ans+ (2*(t-r)) now iterate all occupied rows
+    * if seats 2-9 are available add 2 to ans,
+    * else if seats 2-5 or 4-7 or 6-9 are available add 1 to ans.
 
 
 ~~~cpp

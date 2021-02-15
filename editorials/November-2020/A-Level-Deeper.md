@@ -23,6 +23,94 @@ link: https://www.hackerrank.com/contests/uvce-ncode-november-2020/challenges/q2
 
 * The complexity of the given algorithm is O(n log(n)).
 ~~~cpp
+#include <iostream>
+#include <vector>
+#include <cstdlib>
+#include <algorithm>
+#include <cstdio>
+#include <cmath>
+#include <ctime>
+#include <cstring>
+#include<bits/stdc++.h>
+using namespace std;
+#define VI vector<int>
+#define L(s) ((int)(s).size())
+#define pb push_back
+#define pii pair<int, int>
+#define x first
+#define y second
+#define all(s) (s).begin(), (s).end()
+#define ll long long
+#define mp make_pair
+#define inf 1000000000
+int n, m;
+int have_perm[30], need[30], have[30], need_perm[30];
+inline bool check(int t) {
+    for(int i = 0; i < 30; ++i) {
+        have[i] = have_perm[i];
+        if (need_perm[i] <= t) {
+            need[i] = need_perm[i];
+            t -= need_perm[i];
+        } else {
+            need[i] = t;
+            t = 0;
+        }
+    }
+
+    for(int i = 29; i >= 0; --i) {
+        if (have[i] > m) have[i] = m;
+        if (need[i] > have[i]) return 0;
+        have[i] -= need[i];
+        if (i) {
+            have[i - 1] += 2 * have[i];
+        }
+    }
+    return 1;
+}
+int main() {
+    
+    long long t;
+    cin>>t;
+    while(t--)
+    {
+        cin>>n>>m;
+        for(int i=0;i<30;i++)
+        {
+            have_perm[i]=0; need[i]=0; have[i]=0 ;need_perm[i]=0;
+        }
+    for(int i = 0; i < n; ++i) {
+        int x;
+        cin>>x;
+        for(int bit = 0; bit < 30; ++bit) {
+            if (x & (1 << bit)) {
+                have_perm[bit]++;
+            }
+        }
+    }
+    for(int i = 0; i < m; ++i) {
+        int x;
+        cin>>x;
+        need_perm[x]++;
+    }
+    if (check(m)) {
+        printf("%d\n", m);
+        continue;
+    }
+    int low = 0, high = m;
+    while(high - low > 1) {
+        int mid = (high + low) / 2;
+        if (check(mid)) {
+            low = mid;
+        } else {
+            high = mid;
+        }
+    }
+
+    cout<<low<<endl;
+        
+    }
+    
+}
 
 ~~~
 
