@@ -22,6 +22,7 @@ link: https://www.hackerrank.com/contests/uvce-ncode-november-2020/challenges/q2
 * When implementing this we need to remember that first we have to fill the memory with arrays which are build from the maximal numbers of initial arrays.
 
 * The complexity of the given algorithm is O(n log(n)).
+
 ~~~cpp
 #include <iostream>
 #include <vector>
@@ -111,6 +112,5 @@ int main() {
     }
     
 }
-
 ~~~
 
