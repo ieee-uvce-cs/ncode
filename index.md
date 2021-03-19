@@ -6,17 +6,17 @@ layout: default
 * * *
 
 ### Upcoming Contest
-- [February 2021](https://www.hackerrank.com/uvce-ncode-februray-2021)
+- [March 2021](www.hackerrank.com/uvce-ncode-march-2021)
 
 * * *
 
 ### Past Contests
-- [August 2019](./editorials/August-2019/index.html)
-- [April 2019](./editorials/April-2019/index.html)
-- [February 2019](./editorials/february-2019/index.html)
-- [January 2019](./editorials/january-2019/index.html)
-- [November 2018](./editorials/november-2018/index.html)
 - [October 2018](./editorials/October-2018/index.html)
+- [November 2018](./editorials/november-2018/index.html)
+- [January 2019](./editorials/january-2019/index.html)
+- [February 2019](./editorials/february-2019/index.html)
+- [April 2019](./editorials/April-2019/index.html)
+- [August 2019](./editorials/August-2019/index.html)
 - [October 2019](./editorials/October-2019/index.html)
 - [November 2019](./editorials/November-2019/index.html)
 - [January 2020](./editorials/January-2020/index.html)
@@ -26,4 +26,5 @@ layout: default
 - [August 2020](./editorials/August-2020/index.html)
 - [October 2020](./editorials/October-2020/index.html)
 - [November 2020](./editorials/November-2020/index.html)
+- [February 2021](./editorials/February-2021/index.html)
 
