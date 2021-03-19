@@ -6,7 +6,7 @@ layout: default
 * * *
 
 ### Upcoming Contest
-- [March 2021](www.hackerrank.com/uvce-ncode-march-2021)
+- [March 2021](https://www.hackerrank.com/uvce-ncode-march-2021)
 
 * * *
 
