@@ -6,7 +6,11 @@ link: https://www.hackerrank.com/contests/uvce-ncode-march-2021/challenges/q1-64
 ---
 # Solution
 
-* 
+* This problem was purely mathematical problem. It was based on following properties.
+* $$ LCM of fractions = \frac{LCM of Numerators}{HCF of denominators} $$
+* $$ HCF of fractions = \frac{HCF of Numerators}{LCM of denominators} $$
+* $$ LCM (x,y) = (x*y)/gcd(x,y)$$
+*  Simplified form of a fraction is $$\frac{Numerator/ gcd(Numerator,denominator)}{Denominator/gcd(Numerator,denominator)} $$
 
 ~~~cpp
 
