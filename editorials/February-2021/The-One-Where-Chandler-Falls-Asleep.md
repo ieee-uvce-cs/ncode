@@ -12,7 +12,7 @@ link: https://www.hackerrank.com/contests/uvce-ncode-februray-2021/challenges/q1
 * If both the above checks are true then print both.
 * Else if only first check is true then print forward.
 * Else if only second check is true then print backward.
-* If none is true the print Tusla!
+* If none is true then print Tusla!
 
 ~~~cpp
 
