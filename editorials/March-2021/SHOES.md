@@ -8,6 +8,7 @@ link: https://www.hackerrank.com/contests/uvce-ncode-march-2021/challenges/q2-18
 * This is LCS(Longest common Subsequence) problem.
 * It was to find the longest common subsequence of x and reverse(y)
 * To know about LCS click [this](https://www.geeksforgeeks.org/longest-common-subsequence-dp-4/)
+
 ~~~cpp
 #include<bits/stdc++.h>
 
