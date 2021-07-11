@@ -109,7 +109,7 @@ $$$$
 
 # Additional Material
 
-- [Video editorial](https://drive.google.com/file/d/1hfomVHkY9qswiX2YGDJjl_Sfy3tktBQn/view?usp=sharing)
+- [Video editorial](https://www.youtube.com/watch?v=2BkH9QqharY&list=PLMk3wkBiPDIEQS59Ox7il1QH-w6TqCZY8&index=5)
 - [Representation of graphs and trees using Adjacency Matrix and Adjacency Lists](https://www.youtube.com/watch?v=5hPfm_uqXmw)
 - [BFS and DFS](https://www.youtube.com/watch?v=pcKY4hjDrxk)
 - [Codeforces - Valid BFS?](https://codeforces.com/problemset/problem/1037/D)

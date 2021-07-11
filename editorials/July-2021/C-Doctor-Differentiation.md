@@ -72,5 +72,5 @@ $$$$
 
 # Additional Material
 
-- [Video editorial](https://drive.google.com/file/d/10nugh1qLC7w5AqJqEwoZVOKqfKBQixWW/view?usp=sharing)
+- [Video editorial](https://www.youtube.com/watch?v=LyYn-_bTl-E&list=PLMk3wkBiPDIEQS59Ox7il1QH-w6TqCZY8&index=3)
 - [Codeforces - Differentiation](https://codeforces.com/problemset/gymProblem/101807/D)

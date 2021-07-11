@@ -68,5 +68,5 @@ $$$$
 
 # Additional Material
 
-- [Video editorial](https://drive.google.com/file/d/1RcFGE1JOmu-xWk1QNDf8jCU4Nu1ABQkm/view?usp=sharing)
+- [Video editorial](https://www.youtube.com/watch?v=Mvfi9OGX2_c&list=PLMk3wkBiPDIEQS59Ox7il1QH-w6TqCZY8&index=2)
 - [Wikipedia - Edge cases](https://en.wikipedia.org/wiki/Edge_case)

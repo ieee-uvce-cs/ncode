@@ -50,6 +50,6 @@ $$$$
 
 # Additional Material
 
-- [Video Editorial](https://drive.google.com/file/d/1IOhvrIrvHPHbVDNy2MDkDM47i8T3-JHo/view?usp=sharing)
+- [Video Editorial](https://www.youtube.com/watch?v=e0hpya05vo8&list=PLMk3wkBiPDIEQS59Ox7il1QH-w6TqCZY8)
 - [Leetcode - Find the kth largest element in the array](https://leetcode.com/problems/kth-largest-element-in-an-array/)
 - [Leetcode - kth smallest element in a sorted matrix](https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/)
