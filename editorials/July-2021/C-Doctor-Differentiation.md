@@ -73,4 +73,4 @@ $$$$
 # Additional Material
 
 - [Video editorial](https://drive.google.com/file/d/10nugh1qLC7w5AqJqEwoZVOKqfKBQixWW/view?usp=sharing)
-- [Codeforces - Differntiation](https://codeforces.com/problemset/gymProblem/101807/D)
+- [Codeforces - Differentiation](https://codeforces.com/problemset/gymProblem/101807/D)
