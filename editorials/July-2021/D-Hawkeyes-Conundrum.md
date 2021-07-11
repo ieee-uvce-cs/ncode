@@ -10,8 +10,8 @@ link: https://www.hackerrank.com/contests/uvce-ncode-july-2021/challenges/c-hawk
 - An array is required of size 26 (as the number of lower case letters are 26), to store the number of occurences of the letter
 - Initialize variables $i$ and $j$ starting from 0
 - At each iteration we need to check if the substring is possible by checking the occurence array and see if the last entered letter does not exceed does more than $A_{s[j]-'a'}$ times in the substring.
-- if the substring condition satisfies then we increment $j$ and increment the occurence of the last occured letter in occurence array
-- if substring condition doesnt satisfy then increment $i$ and decrement the occurence of the last occured character as it will not appear in the next iterations
+- If the substring condition satisfies then we increment $j$ and increment the occurence of the last occured letter in occurence array
+- If substring condition doesnt satisfy then increment $i$ and decrement the occurence of the last occured character as it will not appear in the next iterations
 - So at each iteration if the substring is possible then we keep check on length of the substring  ($j$-$i$+1) and find the maximum possible among all
 - The above process continues until $j$  reaches $N$ , in other words $j$ reaches at the end of the string and no more iterations are possible 
 - $Time Complexity: O(n)$
