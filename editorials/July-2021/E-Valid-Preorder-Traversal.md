@@ -90,8 +90,8 @@ int main() {
         }
         
         /*
-            If i equals n, all the nodes have been
-            traversed. Hence, the given array was a
+            If the stack is not empty, all the nodes have 
+            been traversed. Hence, the given array is a
             valid preorder traversal of the tree
         */
         
