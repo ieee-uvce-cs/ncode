@@ -1,7 +1,7 @@
 ---
 layout: default-editorial
 title: October 2021
-problem: C2 - IEEE Event
+problem: C2 - IEEE Event (Hard Version)
 link: https://www.hackerrank.com/contests/uvce-ncode-october-2021/challenges/c2-craziest-sub-sequence
 ---
 # Solution
