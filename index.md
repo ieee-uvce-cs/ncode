@@ -6,11 +6,12 @@ layout: default
 * * *
 
 ### Upcoming Contest
-- [October 2021](https://www.hackerrank.com/uvce-ncode-october-2021)
+- [November 2021]
 
 * * *
 
 ### Past Contests
+- [October 2021](./editorials/October-2021/index.html)
 - [September 2021](./editorials/September-2021/index.html)
 - [August 2021](./editorials/August-2021/index.html)
 - [July 2021](./editorials/July-2021/index.html)
