@@ -18,7 +18,7 @@ $$$$
 
 # Implementation in C++
 
-```cpp14
+```cpp
 #include <iostream>
 #include <algorithm>
 

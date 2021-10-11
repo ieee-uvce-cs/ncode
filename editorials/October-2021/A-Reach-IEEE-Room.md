@@ -8,7 +8,7 @@ link: https://www.hackerrank.com/contests/uvce-ncode-october-2021/challenges/a-r
 
 - The problem can be solved greedily.
 - $N/M$ is the maximum number of hops.
-- $N%M$ is the minimum number of steps.
+- $N$ mod $M$ is the minimum number of steps.
 - $Time Complexity: O(1)$
 
 $$$$
