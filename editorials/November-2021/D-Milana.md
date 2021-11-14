@@ -12,7 +12,7 @@ link: https://www.hackerrank.com/contests/uvce-ncode-november-2021/challenges/d-
 - We have to use the formula, $a_{i, j} = a_{i, j}+min(a_{i-1, j}, a_{i, j-1})$, to find the minimum time required to reach each cell.
 - The answer will be $a_{N, M}$, since we have found the minimum time required to reach each cell.
 - To find the sequence in which cells are visited, we can use backtracking as we have marked the minimum time required to reach each cell.
-- Time Complexity: $O(nm)
+- Time Complexity: $O(nm)$
 
 $$$$
 
