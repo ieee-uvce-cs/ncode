@@ -9,7 +9,7 @@ link: https://www.hackerrank.com/contests/uvce-ncode-november-2021/challenges/d-
 - The problem can be solved using DP.
 - Since Akash can move only right or down, the minimum number of seconds required to reach the cells in the first row and first column are prefix sums of the row and column.
 - Once the time required to reach the cells of the first row and first column are found, the number of seconds required to reach the remaining cells can be found.
-- We have to use the formula, $a_{i, j} = a_{i, j}+min(a_{i-1, j}, a_{i, j-1}$, to find the minimum time required to reach each cell.
+- We have to use the formula, $a_{i, j} = a_{i, j}+min(a_{i-1, j}, a_{i, j-1})$, to find the minimum time required to reach each cell.
 - The answer will be $a_{N, M}$, since we have found the minimum time required to reach each cell.
 - To find the sequence in which cells are visited, we can use backtracking as we have marked the minimum time required to reach each cell.
 - Time Complexity: $O(nm)
