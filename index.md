@@ -6,7 +6,7 @@ layout: default
 * * *
 
 ### Upcoming Contest
-- [December 2021]
+- [December 2021](https://www.hackerrank.com/ncode-december-2021)
 
 * * *
 
