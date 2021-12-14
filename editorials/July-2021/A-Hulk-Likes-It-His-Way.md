@@ -48,7 +48,7 @@ int main()
 
 $$$$
 
-# Additional Material
+# Contest Material
 
 - [Video Editorial](https://www.youtube.com/watch?v=e0hpya05vo8&list=PLMk3wkBiPDIEQS59Ox7il1QH-w6TqCZY8)
 - [Leetcode - Find the kth largest element in the array](https://leetcode.com/problems/kth-largest-element-in-an-array/)

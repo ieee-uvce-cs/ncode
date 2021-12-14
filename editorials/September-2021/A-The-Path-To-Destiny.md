@@ -104,7 +104,7 @@ for _ in range(t):
 
 $$$$
 
-# Additional Material
+# Contest Material
 
 - [Video Editorial](https://www.youtube.com/watch?v=YC2x98EO6Sw)
 - [Codeforces problem - Shortest Path With Obstacle](https://codeforces.com/contest/1547/problem/A)

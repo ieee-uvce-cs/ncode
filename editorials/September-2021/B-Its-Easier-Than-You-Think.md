@@ -73,7 +73,7 @@ for _ in range(t):
 
 $$$$
 
-# Additional Material
+# Contest Material
 
 - [Video Editorial](https://www.youtube.com/watch?v=NvyxVs_7d7g)
 - [Codeforces problem - Filling Diamonds](https://codeforces.com/contest/1339/problem/A)

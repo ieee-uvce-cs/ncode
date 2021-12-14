@@ -70,7 +70,7 @@ int main() {
 
 $$$$
 
-# Additional Material
+# Contest Material
 
 - [Video editorial](https://www.youtube.com/watch?v=LyYn-_bTl-E&list=PLMk3wkBiPDIEQS59Ox7il1QH-w6TqCZY8&index=3)
 - [Codeforces - Differentiation](https://codeforces.com/problemset/gymProblem/101807/D)

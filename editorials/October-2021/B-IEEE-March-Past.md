@@ -122,7 +122,7 @@ for _ in range(t):
 
 $$$$
 
-# Additional Material
+# Contest Material
 
 - [Video Editorial](https://www.youtube.com/watch?v=oWfes5R7Zts)
 - [Codeforces - Reorder the array](https://codeforces.com/problemset/problem/1007/A)

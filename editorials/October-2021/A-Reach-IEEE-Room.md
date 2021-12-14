@@ -71,7 +71,7 @@ for _ in range(t):
 
 $$$$
 
-# Additional Material
+# Contest Material
 
 - [Video Editorial](https://www.youtube.com/watch?v=yoBi8DYlvqA)
 - [Codeforces - Cherry](https://codeforces.com/problemset/problem/1554/A)

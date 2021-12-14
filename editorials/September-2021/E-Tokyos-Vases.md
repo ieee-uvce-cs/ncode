@@ -263,7 +263,7 @@ for _ in range(t):
 
 $$$$
 
-# Additional Material
+# Contest Material
 
 - [Video Editorial](https://www.youtube.com/watch?v=UYvvzT74mAo)
 - [Fast Fibonacci Algorithms](https://www.nayuki.io/page/fast-fibonacci-algorithms)

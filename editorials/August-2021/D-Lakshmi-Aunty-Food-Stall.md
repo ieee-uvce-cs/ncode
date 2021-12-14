@@ -304,7 +304,7 @@ for _ in range(int(input())):
 
 $$$$
 
-# Additional Material
+# Contest Material
 
 - [Video Editorial](https://www.youtube.com/watch?v=Bhr5DXDT2Yo)
 - [Youtube - Dynamic Programming (Jenny's Lectures)](https://www.youtube.com/watch?v=lVR2u9lsxl8&t=252s)

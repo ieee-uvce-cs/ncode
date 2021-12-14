@@ -66,7 +66,7 @@ int main() {
 
 $$$$
 
-# Additional Material
+# Contest Material
 
 - [Video editorial](https://www.youtube.com/watch?v=Mvfi9OGX2_c&list=PLMk3wkBiPDIEQS59Ox7il1QH-w6TqCZY8&index=2)
 - [Wikipedia - Edge cases](https://en.wikipedia.org/wiki/Edge_case)

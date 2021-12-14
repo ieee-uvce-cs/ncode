@@ -170,7 +170,7 @@ for _ in range(t):
 
 $$$$
 
-# Additional Material
+# Contest Material
 
 - [Video Editorial](https://www.youtube.com/watch?v=rcmGY0pW80E)
 - [Geeks for Geeks - Frequency of array elements](https://www.geeksforgeeks.org/counting-frequencies-of-array-elements/)

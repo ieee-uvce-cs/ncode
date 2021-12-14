@@ -127,7 +127,7 @@ for _ in range(t):
 
 $$$$
 
-# Additional Material
+# Contest Material
 
 - [Video Editorial](https://www.youtube.com/watch?v=WHoSEYlC6YQ)
 - [Vedantu - Fundamental Principle of Counting](https://www.vedantu.com/maths/fundamental-principle-of-counting)

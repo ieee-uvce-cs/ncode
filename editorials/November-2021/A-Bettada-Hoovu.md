@@ -119,7 +119,7 @@ for _ in range(0, t):
 
 $$$$
 
-# Additional Material
+# Contest Material
 
 - [Stack Overflow - Traversing 2d array row first and column first](https://stackoverflow.com/questions/21439619/traversing-2d-array-row-first-and-then-column-first)
 

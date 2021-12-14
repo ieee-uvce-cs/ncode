@@ -107,7 +107,7 @@ int main() {
 
 $$$$
 
-# Additional Material
+# Contest Material
 
 - [Video editorial](https://www.youtube.com/watch?v=2BkH9QqharY&list=PLMk3wkBiPDIEQS59Ox7il1QH-w6TqCZY8&index=5)
 - [Representation of graphs and trees using Adjacency Matrix and Adjacency Lists](https://www.youtube.com/watch?v=5hPfm_uqXmw)

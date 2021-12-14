@@ -89,7 +89,7 @@ int main()
 
 $$$$
 
-# Additional Material
+# Contest Material
 
 - [Video editorial](https://www.youtube.com/watch?v=8mKVx7wgOxU&list=PLMk3wkBiPDIEQS59Ox7il1QH-w6TqCZY8&index=4)
 - [Mock Placement - How do you exist in me](https://www.hackerrank.com/contests/mock-placement-coding-round/challenges/do-you-exist-in-me)

@@ -200,7 +200,7 @@ for _ in range(int(input())):
 
 $$$$
 
-# Additional Material
+# Contest Material
 
 - [Video Editorial](https://www.youtube.com/watch?v=5zLXVUlUPmw)
 - [Youtube - Representation of graphs and trees using Adjacency Matrix and Adjacency Lists (Jenny's Lectures)](https://www.youtube.com/watch?v=5hPfm_uqXmw)

@@ -113,7 +113,7 @@ for _ in range(int(input())):
 
 $$$$
 
-# Additional Material
+# Contest Material
 
 - [Video Editorial](https://www.youtube.com/watch?v=ZMmkdhwscUM)
 - [Tutorialspoint - Strings in C++](https://www.tutorialspoint.com/cplusplus/cpp_strings.htm)

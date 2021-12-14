@@ -144,7 +144,7 @@ for _ in range(int(input())):
 
 $$$$
 
-# Additional Material
+# Contest Material
 
 - [Video Editorial](https://www.youtube.com/watch?v=vQns2cT30RM)
 - [Tutorialspoint - Modulus of Negative Numbers in C](https://www.tutorialspoint.com/modulus-of-negative-numbers-in-c)

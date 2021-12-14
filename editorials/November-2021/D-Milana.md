@@ -225,7 +225,7 @@ for _ in range(t):
 
 $$$$
 
-# Additional Material
+# Contest Material
 
 - [Video Editorial](https://www.youtube.com/watch?v=sCGkeyajwz4)
 - [Youtube - Floyd Warshall Algorithm](https://www.youtube.com/watch?v=oNI0rf2P9gE)

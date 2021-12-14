@@ -159,7 +159,7 @@ for _ in range(t):
 
 $$$$
 
-# Additional Material
+# Contest Material
 
 - [Video Editorial](https://www.youtube.com/watch?v=oMYjTUoNQmQ)
 - [CP Algorithms - Longest Increasing Subsequence](https://cp-algorithms.com/sequences/longest_increasing_subsequence.html)
