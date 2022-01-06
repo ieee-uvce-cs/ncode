@@ -2,7 +2,7 @@
 layout: default-editorial
 title: December-2021
 problem: Contest Link
-link: https://www.hackerrank.com/uvce-ncode-december-2021
+link: https://www.hackerrank.com/ncode-december-2021
 ---
 ## Problems
 
