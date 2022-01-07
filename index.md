@@ -6,7 +6,7 @@ layout: default
 * * *
 
 ### Upcoming Contest
-- January 2022(https://www.hackerrank.com/uvce-ncode-january-2022)
+- [January 2022](https://www.hackerrank.com/uvce-ncode-january-2022)
 
 * * *
 
