@@ -6,6 +6,7 @@ layout: default
 * * *
 
 ### Upcoming Contest
+- February 2022
 
 * * *
 
