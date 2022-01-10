@@ -6,11 +6,11 @@ layout: default
 * * *
 
 ### Upcoming Contest
-- [January 2022](https://www.hackerrank.com/uvce-ncode-january-2022)
 
 * * *
 
 ### Past Contests
+- [January 2022](./editorials/January-2022/index.html)
 - [December 2021](./editorials/December-2021/index.html)
 - [November 2021](./editorials/November-2021/index.html)
 - [October 2021](./editorials/October-2021/index.html)
