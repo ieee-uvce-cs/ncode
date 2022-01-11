@@ -6,9 +6,9 @@ link: https://www.hackerrank.com/contests/uvce-ncode-january-2022/challenges/xor
 ---
 # Solution
 
-- Notice that if there are 0s in the binary representation of any element in the array, we can either change it 1 or leave it as it is.
+- Notice that if there are 0s in the binary representation of any element in the array, we can either change it to 1 or leave it as it is.
 - We cannot change a 1 in the binary representation to 0 becuase $b_i \& a_i$ will not be the same.
-- Let the $c0$ be the number of zeros in a position of the binary representation of all the elements. The number of possibilities to change the bits is $2^{c0}$
+- Let $c0$ be the number of zeros in a position of the binary representation of all the elements. The number of possibilities to change the bits is $2^{c0}$
 - For the least significant bit we change it in such a way that there are exactly $2^{c0} \div 2 = 2^{c0-1}$ odd and even XOR of all elements.
 - The only edge case is if the number of 0s in the least significant bit of the binary representations of all the integers in the array is $0$, then the XOR of all elements will be odd if $N$ is odd and even if $N$ is even.
 - Time Complexity: $O(nlogn)$
