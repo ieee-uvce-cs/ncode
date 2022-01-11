@@ -6,8 +6,8 @@ link: https://www.hackerrank.com/contests/uvce-ncode-january-2022/challenges/b-b
 ---
 # Solution
 
-- If $a$ is a multiple of $b$, we need not perform any operations.
-- Otherwise, we can increase $a$ by $b-(a\%b)$ and make the $a$ a multiple of $b$.
+- If $a$ is divisible by $b$, we need not perform any operations.
+- Otherwise, we can increase $a$ by $b-(a\%b)$ and make $a$ divisible by $b$.
 - Time Complexity: $O(1)$
 
 $$$$
