@@ -8,7 +8,7 @@ link: https://www.hackerrank.com/contests/uvce-ncode-january-2022/challenges/c-e
 
 - Notice that for the $i^{th}$ decimal position, you have to write $s_i \times 10^{i-1}$
 - We can simply write $i-1$ zeros for each decimal position after writing **"s[i] x 1"**
-- We need to be careful not to print any extra **'x'** characters.
+- We need to be careful not to print any extra **'x'** or **'+'** characters.
 - Hence, we can print the decimal expansion of the first character and for the remaining charcters, we can prefix a **'+'** character before printing the decimal expansion.
 
 $$$$
