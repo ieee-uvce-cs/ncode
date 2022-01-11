@@ -2,7 +2,7 @@
 layout: default-editorial
 title: January-2022
 problem: Contest Link
-link: https://www.hackerrank.com/ncode-january-2022
+link: https://www.hackerrank.com/uvce-ncode-january-2022
 ---
 ## Problems
 
