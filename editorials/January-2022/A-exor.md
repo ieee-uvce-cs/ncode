@@ -37,9 +37,9 @@ int main() {
 	    //put a 0 at the end of the string. Otherwise,
 	    //put a 1 at the end of the string.
             if (s1[i] == s2[i])
-                res = res+'0';
+                res += '0';
             else
-                res = res+'1';
+                res += '1';
         }
         
         cout<<res<<"\n";
