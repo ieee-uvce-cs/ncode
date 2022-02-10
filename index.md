@@ -6,7 +6,7 @@ layout: default
 * * *
 
 ### Upcoming Contest
-- February 2022
+- [February 2022](https://www.hackerrank.com/ncode-february-2022)
 
 * * *
 
