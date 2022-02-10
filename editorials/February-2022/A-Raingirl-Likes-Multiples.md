@@ -6,7 +6,7 @@ link: https://www.hackerrank.com/contests/ncode-february-2022/challenges/a-my-cr
 ---
 # Solution
 
-- A number $X$ is a multiple of a number $Y$, if $X/%Y == 0$
+- A number $X$ is a multiple of a number $Y$, if $X \% Y == 0$
 - Time Complexity: $O(1)$
 
 $$$$
@@ -80,4 +80,6 @@ $$$$
 
 # Contest Material
 
-- [Codeforces - Ultra Fast Mathematician](https://codeforces.com/contest/61/problem/A)
+- [Codeforces - Divisibility Problem](https://codeforces.com/contest/1328/problem/A)
+- [NCode January 2022 - Back to Basics](https://www.hackerrank.com/contests/uvce-ncode-january-2022/challenges/b-back-to-basics)
+

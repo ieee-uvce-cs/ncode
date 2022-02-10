@@ -351,6 +351,10 @@ $$$$
 
 # Contest Material
 
-- [Bitwise Operations - Errichto](https://www.youtube.com/watch?v=xXKL9YBWgCY)
-- [Bitwise Hacks for Competitive Programming](https://www.geeksforgeeks.org/bitwise-hacks-for-competitive-programming/)
+- [Codeforces blog - Kth Ancestor of All Nodes](https://codeforces.com/blog/entry/52062)
+- [Leetcode - Kth Ancestor of a tree node](https://leetcode.com/problems/kth-ancestor-of-a-tree-node/)
+- [Lowest Common Ancestor using Binary Lifting](https://cp-algorithms.com/graph/lca_binary_lifting.html)
+- [Youtube - Binary Lifting by Errichto](https://www.youtube.com/watch?v=oib-XsjFa-M)
+
+
 

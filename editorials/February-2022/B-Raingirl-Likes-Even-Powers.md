@@ -102,5 +102,6 @@ $$$$
 
 # Contest Material
 
-- [Codeforces - Divisibility Problem](https://codeforces.com/contest/1328/problem/A)
+- [GeeksforGeeks - Write you own Power without using multiplication(*) and division(/) operators](https://www.geeksforgeeks.org/write-you-own-power-without-using-multiplication-and-division/)
+
 

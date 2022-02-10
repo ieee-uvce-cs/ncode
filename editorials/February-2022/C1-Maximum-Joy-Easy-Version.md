@@ -130,5 +130,7 @@ $$$$
 
 # Contest Material
 
-- [Codeforces - Sum of Round Numbers](https://codeforces.com/contest/1352/problem/A)
+- [Codeforces - Download More Ram](https://codeforces.com/problemset/problem/1629/A)
+- [Simplicable - What is brute force algorithm](https://simplicable.com/new/brute-force)
+
 
