@@ -12,7 +12,7 @@ link: https://www.hackerrank.com/contests/ncode-february-2022/challenges/c2-maxi
 - Now keep two sum variables to store sum of costs to left of the position and sum of costs to right of the position initially left sum is $0$ and right sum is already precomputed
 - Now at each iteration right sum gets reduced to its position's suffix sum and left sum gets decreased by its position's prefix sum except the last element which gets multiplied by the size of the array and we addd it to left sum.
 - For each iteration you will get total sum as sum of left sum and right sum and the maximum sum among each iteration is the answer
-- Time Complexity: $O(n)
+- Time Complexity: $O(n)$
 
 $$$$
 
