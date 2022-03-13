@@ -132,9 +132,9 @@ public class Solution {
         
             int [][] a = new int[n][3];
             
-            // p[i].first.first = r[i] (stop hour)
-            // p[i].first.second = l[i] (start hour)
-            // p[i].second = v[i] (number of voters)
+            // a[i][0] = r[i] (stop hour)
+            // a[i][1] = l[i] (start hour)
+            // a[i][2] = v[i] (number of voters)
             for (i = 0; i < n; i++) {
                 l = scan.nextInt();
                 r = scan.nextInt();
