@@ -6,11 +6,11 @@ layout: default
 * * *
 
 ### Upcoming Contest
-- [July 2022](https://www.hackerrank.com/ncode-july-2022)
-
+- [October 2022](https://www.hackerrank.com/ncode-october-2022)
 * * *
 
 ### Past Contests
+- [July 2022](https://www.hackerrank.com/ncode-july-2022)
 - [June 2022](https://www.hackerrank.com/uvce-ncode-june-2022)
 - [March 2022](./editorials/March-2022/index.html)
 - [February 2022](./editorials/February-2022/index.html)
