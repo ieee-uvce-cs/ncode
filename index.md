@@ -6,9 +6,10 @@ layout: default
 * * *
 
 ### Upcoming Contest
-- [September 2024](https://www.hackerrank.com/uvce-ncode-september-2024)
+- [October 2024](https://www.hackerrank.com/uvce-ncode-october-2024)
 
 ### Past Contests
+- [September 2024](https://www.hackerrank.com/uvce-ncode-september-2024)
 - [August 2024](https://www.hackerrank.com/uvce-ncode-august-2024)
 - [July 2024](https://www.hackerrank.com/uvce-ncode-july-2024)
 - [June 2024](https://www.hackerrank.com/ncode-june-2024)
